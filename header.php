@@ -21,15 +21,16 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'strapped' ); ?></a>
+    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'strapped' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
+  <header id="masthead" class="site-header" role="banner">
     <nav role="navigation" id="navbar-main">
       <div class="navbar navbar-inverse navbar-static-top">
         <div class="container">
           <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navbar-responsive-collapse">
+            <!--button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><!?php esc_html_e( 'Primary Menu', 'zanyfunny' ); ?></button-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -50,13 +51,15 @@
               );
             if (has_nav_menu('primary')) {
               wp_nav_menu($args);
-            }
+            }//var_dump($args);
             ?>
-
+            
           </div>
         </div>
       </div>           
     </nav>
   </header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+  <div class="container">
+    <div id="content" class="site-content">
+

@@ -71,26 +71,16 @@ if ( ! function_exists( 'strapped_setup' ) ) :
 		/**
 		 * Add support for core custom logo.
 		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
+		 * 
 		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+		add_theme_support( 'custom-logo');
 	}
 endif;
 add_action( 'after_setup_theme', 'strapped_setup' );
 
 
 if ( !function_exists( 'strapped_the_custom_logo' ) ) :
-/**
- * Displays the optional custom logo.
- *
- * Does nothing if the custom logo is not available.
- *
- */
+
 function strapped_the_custom_logo() {
     // Try to retrieve the Custom Logo
     $output = '';
@@ -158,6 +148,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
- * Load bootstrap walker
+ * Load custom bootstrap walker
 */
 require get_template_directory() . '/inc/bootstrap-walker.php';

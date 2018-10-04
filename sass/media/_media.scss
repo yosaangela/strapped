@@ -18,9 +18,11 @@ object {
 .custom-logo-link {
 	display: inline-block;
 }
- img {
+
+img {
  	max-width: 100%;
  	height: auto;
+ 	display: block;
  }
 
 /*--------------------------------------------------------------

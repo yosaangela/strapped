@@ -12,6 +12,7 @@
 ?>
 
 	</div><!-- #content -->
+	</div>  <!-- container-->
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
@@ -26,7 +27,7 @@
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'strapped' ), 'strapped', '<a href="http://underscores.me/">yosa angela</a>' );
 				?>
-		</div><!-- .site-info -->
+		</div><!--site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
