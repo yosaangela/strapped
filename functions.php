@@ -44,7 +44,7 @@ if ( ! function_exists( 'strapped_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'strapped' ),
+			'primary' => esc_html__( 'Primary', 'strapped' ),
 		) );
 
 		/*
@@ -123,6 +123,12 @@ require get_template_directory() . '/inc/scripts.php';
  * Implement the widgets
  */
 require get_template_directory() . '/inc/widgets.php';
+
+
+/**
+ * Extras
+ */
+require get_template_directory() . '/inc/extras.php';
 
 
 /**

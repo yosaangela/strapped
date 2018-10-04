@@ -6,7 +6,7 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
 
   function bootstrap_setup(){
 
-    class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
+    class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu { // BS walker just extends a native walker class.ya, got it. great! :)))
 
 
       function start_lvl( &$output, $depth = 0, $args = array() ) {
@@ -16,13 +16,12 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
 
       }
 
-      function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+      function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) { //whats up?!
 
         $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
         $li_attributes = '';
         $class_names = $value = '';
-
         $classes = empty( $item->classes ) ? array() : (array) $item->classes;
         $classes[] = ($args->has_children) ? 'dropdown' : '';
         $classes[] = ($item->current || $item->current_item_ancestor) ? 'active' : '';

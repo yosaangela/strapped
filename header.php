@@ -42,16 +42,18 @@
 
           <div class="navbar-collapse collapse navbar-responsive-collapse">
             <?php
-            $args = array(
-              'theme_location' => 'primary',
+            $args = array( // Array of options
+              'theme_location' => 'primary', // This is where you assign location to the menu
               'depth'      => 2,
               'container'  => false,
               'menu_class'     => 'nav navbar-nav',
-              'walker'     => new Bootstrap_Walker_Nav_Menu()
+              'walker'     => new Bootstrap_Walker_Nav_Menu(), //wait, this new bl blaa.. is we going make an object? Yes, you have to instantiate the class to use it, or else it just exists in global namespace.aaa ok.
               );
-            if (has_nav_menu('primary')) {
-              wp_nav_menu($args);
-            }//var_dump($args);
+            if (has_nav_menu('primary')) { 
+            // here is if statement to check if there are items in menu assigned in primary location
+              wp_nav_menu($args); // This is WP native function to call a menu
+            }
+            headlab_menu('primary');
             ?>
             
           </div>
